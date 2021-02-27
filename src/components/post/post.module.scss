@@ -1,0 +1,20 @@
+.root {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.root.small {
+    flex-direction: column;
+}
+.userSection {
+    border-right: 1px solid black;
+    min-width: 7em;
+}
+.userSection.small {
+    border-bottom: 1px solid black;
+    border-right: none;
+}
+.textSection {
+    flex-basis: 20em;
+    flex-grow: 1;
+}

@@ -1,0 +1,20 @@
+.root {
+    border-radius: 2px;
+}
+.root:hover {
+    box-shadow: 0 0 5px;
+}
+.wrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.picture {
+    width: 2rem;
+    background-color: rgb(118, 172, 111);
+    border-radius: 40px;
+    margin-right: 10px;
+}
+.menu {
+    margin-left: 5px;
+}

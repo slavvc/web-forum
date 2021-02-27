@@ -1,0 +1,33 @@
+$animDelay: 0.5s;
+
+.root {
+    position: relative;
+}
+.menu {
+    position: absolute;
+    z-index: 1;
+    top: 0.5em;
+    right: 0;
+    max-width: 15em;
+    width: 90vw;
+    // min-width: 20em;
+    background-color: rgb(255, 255, 255);
+    // color: white;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    visibility: hidden;
+    // padding: 10px;
+    opacity: 0;
+    transition: visibility 0s $animDelay, opacity $animDelay;
+}
+.isShown {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity $animDelay;
+}
+.back {
+    cursor: pointer;
+}
