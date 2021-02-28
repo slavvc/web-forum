@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 export default function(props){
+    const {goTo} = props
     return <>
         <Form>
             <Form.Group controlId='username'>
@@ -27,8 +28,13 @@ export default function(props){
             </Button>
         </Form>
         or
-        <Button variant='primary'>
-            Sign in
+        <Button 
+            variant='primary'
+            onClick={()=>{
+                goTo('registration')
+            }}
+        >
+            Sign up
         </Button>
     </>
 }

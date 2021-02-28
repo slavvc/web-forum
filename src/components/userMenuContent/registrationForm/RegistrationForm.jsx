@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 export default function(props){
+    const {goTo} = props
     return <>
         <Form>
             <Form.Group controlId='username'>
@@ -27,7 +28,7 @@ export default function(props){
                 variant='primary'
                 className='d-block mx-auto'
             >
-                Sign in
+                Sign up
             </Button>
         </Form>
     </>
