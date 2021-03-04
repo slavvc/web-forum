@@ -23,14 +23,10 @@ export function selectContent(state){
     return state.content
 }
 
-// const apiUrl = process.env.NODE_ENV == 'development' 
-//     ? 'http://127.0.0.1:8000' 
-//     : ''
-const apiUrl = ''
 
 export function getTopic(id){
     return function(dispatch){
-        fetch(`${apiUrl}/api/topic/${id}`)
+        fetch(`/api/topic/${id}`)
         .then(data=>data.json())
         .then(json=>{
             dispatch(setContent(json))
@@ -40,7 +36,7 @@ export function getTopic(id){
 
 export function getThread(id){
     return function(dispatch){
-        fetch(`${apiUrl}/api/thread/${id}`)
+        fetch(`/api/thread/${id}`)
         .then(data=>data.json())
         .then(json=>{
             dispatch(setContent(json))

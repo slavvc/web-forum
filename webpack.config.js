@@ -27,6 +27,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  entry: path.resolve(__dirname, 'src/index.jsx'),
   plugins: [
     new webpack.ProgressPlugin(), 
     new HtmlWebpackPlugin({
@@ -92,7 +93,10 @@ module.exports = {
   devServer: {
     // open: true,
     host: '0.0.0.0',
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:8000/'
+    }
   },
   output: {
     publicPath: '/'
