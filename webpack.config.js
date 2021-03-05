@@ -86,7 +86,8 @@ module.exports = {
       Components: path.resolve(__dirname, 'src/components'),
       Src: path.resolve(__dirname, 'src'),
       Store: path.resolve(__dirname, 'src/store'),
-      Public: path.resolve(__dirname, 'public')
+      Public: path.resolve(__dirname, 'public'),
+      Hooks: path.resolve(__dirname, 'src/hooks')
     }
   },
 

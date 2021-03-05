@@ -4,31 +4,15 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
+import useWidthCheck from 'Hooks/useWidthCheck'
+
 const minWidth = 350
 
 
 export default function(props){
     const {className, user, text} = props
     const postRef = useRef(null)
-    const [usingSmallStyle, setUsingSmallStyle] = useState(false)
-
-    const checkWidth = ()=>{
-        const width = postRef.current?.offsetWidth
-        if(width < minWidth){
-            setUsingSmallStyle(true)
-        }else{
-            setUsingSmallStyle(false)
-        }
-    }
-
-    useEffect(checkWidth, [postRef])
-
-    useEffect(()=>{
-        addEventListener('resize', checkWidth)
-        return ()=>{
-            removeEventListener('resize', checkWidth)
-        }
-    })
+    const usingSmallStyle = useWidthCheck(postRef, minWidth)
 
     return <div 
         className={cx(
