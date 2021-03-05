@@ -27,6 +27,13 @@ export function selectContent(state){
 export function getTopic(id){
     return function(dispatch){
         fetch(`/api/topic/${id}`)
+        .then(res=>{
+            if(res.status == 200){
+                return res
+            }else{
+                throw 'api error'
+            }
+        })
         .then(data=>data.json())
         .then(json=>{
             dispatch(setContent(json))
@@ -37,6 +44,13 @@ export function getTopic(id){
 export function getThread(id){
     return function(dispatch){
         fetch(`/api/thread/${id}`)
+        .then(res=>{
+            if(res.status == 200){
+                return res
+            }else{
+                throw 'api error'
+            }
+        })
         .then(data=>data.json())
         .then(json=>{
             dispatch(setContent(json))
