@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Post from "Components/post/Post";
+import Post from 'Components/post/Post'
+import NewPostForm from 'Components/newPostForm/NewPostForm'
 
 export default function(props){
     const {title, posts} = props
@@ -11,5 +12,6 @@ export default function(props){
                 <Post {...post} key={idx}/>
             ))
         }
+        <NewPostForm/>
     </div>
 }
