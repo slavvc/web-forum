@@ -6,7 +6,7 @@ import './customBootstrap.scss'
 
 // import './mockServer'
 
-import App from 'Components/app/App'
+import App from 'Components/App/App'
 
 import store from 'Store/store'
 
