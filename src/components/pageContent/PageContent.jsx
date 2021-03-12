@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ThreadContent from 'Components/ThreadContent/ThreadContent'
+import ThreadContentContainer from 'Components/ThreadContentContainer/ThreadContentContainer'
 import TopicContent from 'Components/TopicContent/TopicContent'
 
 
@@ -9,6 +9,6 @@ export default function PageContent(props){
     return type == 'topic'
         ? <TopicContent {...data}/>
         : type == 'thread'
-            ? <ThreadContent {...data}/>
+            ? <ThreadContentContainer {...data}/>
             : null
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Post from 'Components/Post/Post'
-import NewPostForm from 'Components/NewPostForm/NewPostForm'
+import NewPostFormContainer from 'Components/NewPostFormContainer/NewPostFormContainer'
 
 export default function ThreadContent(props){
-    const {title, posts} = props
+    const {title, posts, isLoggedIn} = props
     return <div className='mx-2'>
         <h1>{title}</h1>
         {
@@ -12,6 +12,10 @@ export default function ThreadContent(props){
                 <Post {...post} key={idx}/>
             ))
         }
-        <NewPostForm/>
+        {
+            isLoggedIn
+            ? <NewPostFormContainer/>
+            : null
+        }
     </div>
 }

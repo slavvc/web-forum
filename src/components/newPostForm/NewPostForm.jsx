@@ -10,7 +10,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
 export default function NewPostForm(props){
-    const {className} = props
+    const {className, onSend, textRef, username} = props
     const ref = useRef(null)
     const usingSmallStyle = useWidthCheck(ref, 350)
     return <div 
@@ -29,7 +29,7 @@ export default function NewPostForm(props){
                 {small: usingSmallStyle}
             )}
         >
-            new post
+            {username}
         </div>
         <div 
             className={cx('textSection', 'p-1')}
@@ -37,6 +37,7 @@ export default function NewPostForm(props){
             <input 
                 type='text'
                 placeholder='write text here'
+                ref={textRef}
             />
         </div>
         <div className={cx(
@@ -45,7 +46,9 @@ export default function NewPostForm(props){
             'sendButton', 'd-flex', 
             'justify-content-center', 'align-items-center',
             'p-2'
-        )}>
+        )}
+        onClick={onSend}
+        >
             <FontAwesomeIcon icon={faPaperPlane} role='button'/>
         </div>
     </div>

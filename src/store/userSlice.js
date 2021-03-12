@@ -25,12 +25,16 @@ export function selectUser(state){
     return state.user.user
 }
 
+export function selectToken(state){
+    return state.user.token
+}
+
 export function authenticated(token){
     return function(dispatch){
         dispatch(setToken(token))
         fetch('/api/user', {
             method: 'GET',
-            headers:{
+            headers: {
                 authorization: 'bearer ' + token
             }
         })

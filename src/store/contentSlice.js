@@ -3,6 +3,7 @@ import {createSlice} from '@reduxjs/toolkit'
 const slice = createSlice({
     name: 'content',
     initialState: {
+        id: 0,
         type: 'topic',
         data: {
             topics: [],
@@ -23,6 +24,10 @@ export function selectContent(state){
     return state.content
 }
 
+export function selectId(state){
+    return state.content.id
+}
+
 
 export function getTopic(id){
     return function(dispatch){
@@ -36,6 +41,7 @@ export function getTopic(id){
         })
         .then(data=>data.json())
         .then(json=>{
+            json.id = id
             dispatch(setContent(json))
         })
     }
@@ -53,6 +59,7 @@ export function getThread(id){
         })
         .then(data=>data.json())
         .then(json=>{
+            json.id = id
             dispatch(setContent(json))
         })
     }
