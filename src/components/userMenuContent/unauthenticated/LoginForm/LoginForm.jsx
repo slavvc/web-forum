@@ -6,7 +6,9 @@ import Button from 'react-bootstrap/Button'
 export default function LoginForm(props){
     const {
         goTo, onSubmit,
-        usernameRef, passwordRef
+        usernameRef, passwordRef,
+        wrongCredentials,
+        signUpOnClick
     } = props
     return <>
         <Form
@@ -24,6 +26,11 @@ export default function LoginForm(props){
                 </Form.Label>
                 <Form.Control type='password' ref={passwordRef}/>
             </Form.Group>
+            {
+                wrongCredentials
+                ? 'wrong credentials'
+                : null
+            }
             <Button 
                 type='submit' 
                 variant='primary'
@@ -35,10 +42,7 @@ export default function LoginForm(props){
         or
         <Button 
             variant='primary'
-            onClick={()=>{
-                console.log(goTo)
-                goTo('registration')
-            }}
+            onClick={signUpOnClick}
         >
             Sign up
         </Button>

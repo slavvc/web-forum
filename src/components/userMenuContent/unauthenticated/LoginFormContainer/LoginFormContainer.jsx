@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 import LoginForm from '../LoginForm/LoginForm'
@@ -10,6 +10,7 @@ export default function LoginFormContainer(props){
     const dispatch = useDispatch()
     const usernameRef = useRef(null)
     const passwordRef = useRef(null)
+    const [wrongCredentials, setWrongCredentials] = useState(false)
     return <LoginForm
         onSubmit={async ev => {
             ev.preventDefault()
@@ -25,13 +26,16 @@ export default function LoginFormContainer(props){
             if(res.status == 200){
                 const json = await res.json()
                 const token = json.access_token
-                console.log(token)
                 dispatch(authenticated(token))
+            }else{
+                setWrongCredentials(true)
             }
-            console.log(res)
         }}
         usernameRef={usernameRef}
         passwordRef={passwordRef}
-        goTo={goTo}
+        signUpOnClick={()=>{
+            goTo('registration')
+        }}
+        wrongCredentials={wrongCredentials}
     />
 }

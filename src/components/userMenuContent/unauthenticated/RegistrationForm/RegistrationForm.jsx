@@ -4,9 +4,11 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 export default function RegistrationForm(props){
-    const {goTo} = props
+    const {onSubmit} = props
     return <>
-        <Form>
+        <Form
+            onSubmit={onSubmit}
+        >
             <Form.Group controlId='username'>
                 <Form.Label>
                     New username
