@@ -1,0 +1,21 @@
+$border: 1px solid black;
+.root {
+    display: flex;
+    border-radius: 5px;
+    border: $border;
+}
+.root.small {
+    flex-direction: column;
+}
+.userSection {
+    border-right: $border;
+    min-width: 7em;
+}
+.userSection.small {
+    border-bottom: $border;
+    border-right: none;
+}
+.textSection {
+    // flex-basis: 20em;
+    flex-grow: 1;
+}

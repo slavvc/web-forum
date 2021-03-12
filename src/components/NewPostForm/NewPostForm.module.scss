@@ -1,0 +1,35 @@
+$border: 1px solid black;
+
+.root {
+    display: flex;
+    border-radius: 5px;
+    border: $border;
+}
+.root.small {
+    flex-direction: column;
+}
+.userSection {
+    border-right: $border;
+    min-width: 7em;
+}
+.userSection.small {
+    border-bottom: $border;
+    border-right: none;
+}
+.textSection {
+    // flex-basis: 20em;
+    flex-grow: 1;
+}
+.buttonSection {
+    border-left: $border;
+}
+.buttonSection.small {
+    border-left: none;
+    border-top: $border;
+}
+.buttonSection:hover {
+    box-shadow: 0 0 5px;
+}
+.textSection > input{
+    width: 100%;
+}
