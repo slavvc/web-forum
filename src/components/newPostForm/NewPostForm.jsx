@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import styles from './newPostForm.module.scss'
+import styles from './NewPostForm.module.scss'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
@@ -9,7 +9,7 @@ import useWidthCheck from 'Hooks/useWidthCheck'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-export default function(props){
+export default function NewPostForm(props){
     const {className} = props
     const ref = useRef(null)
     const usingSmallStyle = useWidthCheck(ref, 350)

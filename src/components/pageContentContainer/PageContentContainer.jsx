@@ -4,9 +4,9 @@ import {selectContent, getTopic, getThread} from 'Store/contentSlice'
 import {useDispatch, useSelector} from 'react-redux'
 import {useRouteMatch} from 'react-router-dom'
 
-import PageContent from 'Components/pageContent/PageContent'
+import PageContent from 'Components/PageContent/PageContent'
 
-export default function(props){
+export default function PageContentContainer(props){
     const match = useRouteMatch({
         path: ['/topic/:id', '/thread/:id']
     })

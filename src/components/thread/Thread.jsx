@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './thread.module.scss'
+import styles from './Thread.module.scss'
 import classNames from 'classnames/bind'
 
 import veganImage from 'Public/flaticon/vegetarian.svg'
@@ -16,7 +16,7 @@ const veganSign = <img
     title="This thread is vegan safe"
 />
 
-export default function(props){
+export default function Thread(props){
     const {className, title, lastPost, isVegan, numPosts, onClick} = props
 
     return <Container

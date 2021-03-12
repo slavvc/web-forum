@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import styles from './user.module.scss'
+import styles from './User.module.scss'
 import classNames from 'classnames/bind'
 
 import Image from 'react-bootstrap/Image'
@@ -8,11 +8,11 @@ import {faAngleDown} from '@fortawesome/free-solid-svg-icons/faAngleDown'
 
 import userImage from 'Public/flaticon/user.svg'
 
-import UserMenu from 'Components/usermenu/UserMenu'
+import UserMenu from 'Components/Usermenu/UserMenu'
 
 const cx = classNames.bind(styles)
 
-export default function(props){
+export default function User(props){
     const {className, userInfo} = props
     const [shown, setShown] = useState(false)
 

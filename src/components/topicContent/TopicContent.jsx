@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from './topicContent.module.scss'
+import styles from './TopicContent.module.scss'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-import LinkContainer from 'Components/linkContainer/LinkContainer'
+import LinkContainer from 'Components/LinkContainer/LinkContainer'
 
-export default function(props){
+export default function TopicContent(props){
     const {title, topics, threads} = props
     return <>
         <h1 className='mx-2'>

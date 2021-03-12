@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Thread from 'Components/thread/Thread'
-import Topic from 'Components/topic/Topic'
+import Thread from 'Components/Thread/Thread'
+import Topic from 'Components/Topic/Topic'
 
 import { useHistory } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ const componentDict = {
     thread: Thread
 }
 
-export default function(props){
+export default function LinkContainer(props){
     const {link, type, data} = props
     let history = useHistory()
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './topic.module.scss'
+import styles from './Topic.module.scss'
 import classNames from 'classnames/bind'
 
 import folderImage from 'Public/flaticon/folder.svg'
@@ -13,7 +13,7 @@ import {useHistory} from 'react-router-dom'
 const cx = classNames.bind(styles)
 
 
-export default function(props){
+export default function Topic(props){
     const {
         className, title, lastPost,
          numThreads, numTopics, link

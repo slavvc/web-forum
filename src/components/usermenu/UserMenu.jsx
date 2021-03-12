@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import styles from './userMenu.module.scss'
+import styles from './UserMenu.module.scss'
 import classNames from 'classnames/bind'
 
 import Button from 'react-bootstrap/Button' 
@@ -8,10 +8,10 @@ import Col from 'react-bootstrap/Col'
 
 const cx = classNames.bind(styles)
 
-import UserMenuContent from 'Components/userMenuContent/UserMenuContent'
+import UserMenuContent from 'Components/UserMenuContent/UserMenuContent'
 
 
-const profileMenu = <>
+const ProfileMenu = <>
     <Button variant='white'>
         Settings
     </Button>
@@ -23,7 +23,7 @@ const profileMenu = <>
     </Button>
 </>
 
-export default function(props){
+export default function UserMenu(props){
     const {className, isShown, isLoggedIn} = props
 
     return <div 

@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './footer.module.scss'
+import styles from './Footer.module.scss'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export default function(props){
+export default function Footer(props){
     const {className} = props
 
     return <footer className={cx('root', className, 'mt-3')}>

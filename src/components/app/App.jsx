@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from './app.module.scss'
+import styles from './App.module.scss'
 import classNames from 'classnames/bind'
 
 import {BrowserRouter} from 'react-router-dom'
 
-import UserBar from 'Components/userbar/UserBar'
-import Logo from 'Components/logo/Logo'
-import Footer from 'Components/footer/Footer'
+import UserBar from 'Components/UserBar/UserBar'
+import Logo from 'Components/Logo/Logo'
+import Footer from 'Components/Footer/Footer'
 
-import PageContentContainer from 'Components/pageContentContainer/PageContentContainer'
+import PageContentContainer from 'Components/PageContentContainer/PageContentContainer'
 
 
 const cx = classNames.bind(styles)
@@ -16,7 +16,7 @@ const cx = classNames.bind(styles)
 const user = undefined
 // const user = { name: 'Димас' }
 
-export default function(props){
+export default function App(props){
 
 
     return <BrowserRouter>

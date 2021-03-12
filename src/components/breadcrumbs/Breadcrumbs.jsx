@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './breadcrumbs.module.scss'
+import styles from './Breadcrumbs.module.scss'
 import classNames from 'classnames/bind'
 
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
@@ -10,7 +10,7 @@ const cx = classNames.bind(styles)
 
 // const path = ['Home', 'Stairway', 'Train Station', 'Magadan']
 
-export default function(props){
+export default function Breadcrumbs(props){
     const {className, path, isTopic} = props
     let history = useHistory()
 
