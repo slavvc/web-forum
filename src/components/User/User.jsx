@@ -8,7 +8,7 @@ import {faAngleDown} from '@fortawesome/free-solid-svg-icons/faAngleDown'
 
 import userImage from 'Public/flaticon/user.svg'
 
-import UserMenu from 'Components/Usermenu/UserMenu'
+import UserMenu from 'Components/UserMenu/UserMenu'
 
 const cx = classNames.bind(styles)
 
