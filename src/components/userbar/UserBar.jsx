@@ -1,17 +1,17 @@
 import React from 'react'
-import styles from './userBar.module.scss'
+import styles from './UserBar.module.scss'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-import User from 'Components/user/User'
-import BreadcrumbsContainer from 'Components/breadcrumbsContainer/BreadcrumbsContainer'
+import UserContainer from 'Components/UserContainer/UserContainer'
+import BreadcrumbsContainer from 'Components/BreadcrumbsContainer/BreadcrumbsContainer'
 
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 
-export default function(props){
+export default function UserBar(props){
     const {className, userInfo} = props
     
     return <Row 
@@ -30,7 +30,7 @@ export default function(props){
             <BreadcrumbsContainer className={cx('breadcrumbs')}/>
         </Col>
         <Col xs="auto">
-            <User userInfo={userInfo}/>
+            <UserContainer/>
         </Col>
     </Row>
 }

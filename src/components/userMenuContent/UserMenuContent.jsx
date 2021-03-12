@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './userMenuContent.module.scss'
+import styles from './UserMenuContent.module.scss'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
@@ -8,15 +8,15 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 
 
-import LoginForm from './loginForm/LoginForm'
-import RegistrationForm from './registrationForm/RegistrationForm'
+import LoginFormContainer from './LoginFormContainer/LoginFormContainer'
+import RegistrationForm from './RegistrationForm/RegistrationForm'
 
 const componentDict = {
-    login: LoginForm,
+    login: LoginFormContainer,
     registration: RegistrationForm
 }
 
-export default function(props){
+export default function UserMenuContent(props){
     const [history, setHistory] = useState(['login'])
 
     const Component = componentDict[history[history.length - 1]]
