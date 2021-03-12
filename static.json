@@ -2,5 +2,10 @@
     "root": "dist/",
     "routes": {
         "/**": "index.html"
+    },
+    "proxy": {
+        "/api/": {
+            "origin": "${API_SERVER_URL}"
+        }
     }
 }
