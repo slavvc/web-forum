@@ -5,9 +5,14 @@ import classNames from 'classnames/bind'
 const cx = classNames.bind(styles)
 
 import LinkContainer from 'Components/LinkContainer/LinkContainer'
+import NewThreadFormContainer from 'Components/NewThreadFormContainer/NewThreadFormContainer'
+import NewTopicFormContainer from 'Components/NewTopicFormContainer/NewTopicFormContainer'
 
 export default function TopicContent(props){
-    const {title, topics, threads} = props
+    const {
+        title, topics, threads,
+        showNewForms
+    } = props
     return <>
         <h1 className='mx-2'>
             {title}
@@ -23,6 +28,11 @@ export default function TopicContent(props){
                     />
                 ))
             }
+            {
+                showNewForms
+                ? <NewTopicFormContainer/>
+                : null
+            }
         </div>
         <div className='mt-4'/>
         <div className='mx-2'>
@@ -35,6 +45,11 @@ export default function TopicContent(props){
                         key={thread.link}
                     />
                 ))
+            }
+            {
+                showNewForms
+                ? <NewThreadFormContainer/>
+                : null
             }
         </div>
     </>

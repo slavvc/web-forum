@@ -1,13 +1,13 @@
 import React from 'react'
 
 import ThreadContentContainer from 'Components/ThreadContentContainer/ThreadContentContainer'
-import TopicContent from 'Components/TopicContent/TopicContent'
+import TopicContentContainer from 'Components/TopicContentContainer/TopicContentContainer'
 
 
 export default function PageContent(props){
     const {type, data} = props
     return type == 'topic'
-        ? <TopicContent {...data}/>
+        ? <TopicContentContainer {...data}/>
         : type == 'thread'
             ? <ThreadContentContainer {...data}/>
             : null
