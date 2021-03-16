@@ -18,23 +18,28 @@ export default function NewPostFormContainer(props){
         username={user.name}
         textRef={textRef}
         onSend={async ()=>{
-            const text = textRef.current?.value
-            const response = await fetch(
-                '/api/message',
-                {
-                    method: 'POST',
-                    body: new URLSearchParams({
-                        thread_id: threadId,
-                        message: text
-                    }),
-                    headers: {
-                        authorization: `bearer ${token}`
+            const textElem = textRef.current
+            if(textElem !== null){
+                const text = textElem.value
+                const response = await fetch(
+                    '/api/message',
+                    {
+                        method: 'POST',
+                        body: new URLSearchParams({
+                            thread_id: threadId,
+                            message: text
+                        }),
+                        headers: {
+                            authorization: `bearer ${token}`
+                        }
                     }
+                )
+                if(response.status == 204){
+                    dispatch(getThread(threadId))
+                    textElem.value = ''
                 }
-            )
-            if(response.status == 204){
-                dispatch(getThread(threadId))
             }
+            
         }}
     />
 }

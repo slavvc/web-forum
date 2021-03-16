@@ -3,6 +3,7 @@ $border: 1px solid black;
     display: flex;
     border-radius: 5px;
     border: $border;
+    align-items: stretch;
 }
 .root.small {
     flex-direction: column;
@@ -10,12 +11,26 @@ $border: 1px solid black;
 .userSection {
     border-right: $border;
     min-width: 7em;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 }
 .userSection.small {
     border-bottom: $border;
     border-right: none;
+    min-width: unset;
 }
 .textSection {
     // flex-basis: 20em;
     flex-grow: 1;
+}
+.buttonSection {
+    border-left: $border;
+}
+// .buttonSection.small {
+//     border-left: none;
+//     border-top: $border;
+// }
+.buttonSection:hover {
+    box-shadow: 0 0 5px;
 }

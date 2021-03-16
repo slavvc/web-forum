@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Post from 'Components/Post/Post'
+import PostContainer from 'Components/PostContainer/PostContainer'
 import NewPostFormContainer from 'Components/NewPostFormContainer/NewPostFormContainer'
 
 export default function ThreadContent(props){
@@ -9,7 +9,7 @@ export default function ThreadContent(props){
         <h1>{title}</h1>
         {
             posts.map((post, idx) => (
-                <Post {...post} key={idx}/>
+                <PostContainer {...post} key={post.id}/>
             ))
         }
         {

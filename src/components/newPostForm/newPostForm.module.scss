@@ -4,6 +4,7 @@ $border: 1px solid black;
     display: flex;
     border-radius: 5px;
     border: $border;
+    align-items: stretch;
 }
 .root.small {
     flex-direction: column;
@@ -11,6 +12,7 @@ $border: 1px solid black;
 .userSection {
     border-right: $border;
     min-width: 7em;
+    overflow: hidden;
 }
 .userSection.small {
     border-bottom: $border;
