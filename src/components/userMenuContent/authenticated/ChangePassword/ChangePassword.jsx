@@ -3,11 +3,11 @@ import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function RegistrationForm(props){
+export default function ChangePassword(props){
     const {
         onSubmit,
-        usernameRef,
-        passwordRef,
+        oldPasswordRef,
+        newPasswordRef,
         repeatPasswordRef,
         status
     } = props
@@ -15,17 +15,17 @@ export default function RegistrationForm(props){
         <Form
             onSubmit={onSubmit}
         >
-            <Form.Group controlId='username'>
+            <Form.Group controlId='oldPassword'>
                 <Form.Label>
-                    New username
+                    Old password
                 </Form.Label>
-                <Form.Control type='text' ref={usernameRef}/>
+                <Form.Control type='password' ref={oldPasswordRef}/>
             </Form.Group>
-            <Form.Group controlId='password'>
+            <Form.Group controlId='newPassword'>
                 <Form.Label>
                     New password
                 </Form.Label>
-                <Form.Control type='password' ref={passwordRef}/>
+                <Form.Control type='password' ref={newPasswordRef}/>
                 <Form.Label>
                     Repeat password
                 </Form.Label>
@@ -46,7 +46,7 @@ export default function RegistrationForm(props){
                 variant='primary'
                 className='d-block mx-auto'
             >
-                Sign up
+                Change password
             </Button>
         </Form>
     </>

@@ -6,11 +6,15 @@ import {setUser} from 'Store/userSlice'
 import ProfileMenu from '../ProfileMenu/ProfileMenu'
 
 export default function ProfileMenuContainer(props){
+    const {goTo} = props
     const dispatch = useDispatch()
 
     return <ProfileMenu
         onLogOut={()=>{
             dispatch(setUser(null))
+        }}
+        onChangePassword={()=>{
+            goTo('changepassword')
         }}
     />
 }

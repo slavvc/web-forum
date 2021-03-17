@@ -9,11 +9,13 @@ import LoginFormContainer from '../unauthenticated/LoginFormContainer/LoginFormC
 import RegistrationFormContainer from '../unauthenticated/RegistrationFormContainer/RegistrationFormContainer'
 
 import ProfileMenuContainer from '../authenticated/ProfileMenuContainer/ProfileMenuContainer'
+import ChangePasswordContainer from '../authenticated/ChangePasswordContainer/ChangePasswordContainer'
 
 const componentDict = {
     login: LoginFormContainer,
     registration: RegistrationFormContainer,
-    profile: ProfileMenuContainer
+    profile: ProfileMenuContainer,
+    changepassword: ChangePasswordContainer
 }
 
 export default function UserMenuContentContainer(props){

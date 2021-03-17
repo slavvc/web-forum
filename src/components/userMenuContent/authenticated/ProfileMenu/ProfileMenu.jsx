@@ -3,12 +3,13 @@ import React from 'react'
 import Button from 'react-bootstrap/Button' 
 
 export default function ProfileMenu(props){
-    const {onLogOut} = props
+    const {onLogOut, onChangePassword} = props
     return  <>
-        <Button variant='white'>
-            Settings
-        </Button>
-        <Button variant='white'>
+        <Button 
+            variant='primary' 
+            className='mb-2'
+            onClick={onChangePassword}
+        >
             Change password
         </Button>
         <Button 

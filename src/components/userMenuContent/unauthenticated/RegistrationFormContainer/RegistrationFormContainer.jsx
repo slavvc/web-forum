@@ -12,7 +12,7 @@ function checkPassword(
     return res
 }
 
-async function signUp(username, password, status, setStatus){
+async function signUp(username, password, status, setStatus, goTo){
     const response = await fetch(
         '/api/signup',
         {
@@ -20,8 +20,14 @@ async function signUp(username, password, status, setStatus){
             body: new URLSearchParams({username, password})
         }
     )
-    if(response.status == 204){
-        
+    switch(response.status){
+        case 204:
+            setStatus({samePassword: true, failMessage: ''})
+            goTo('login')
+            break
+        case 400:
+            const json = await response.json()
+            setStatus({...status, failMessage: json.detail})
     }
 }
 
@@ -31,7 +37,8 @@ export default function RegistrationFormContainer(props){
     const passwordRef = useRef(null)
     const repeatPasswordRef = useRef(null)
     const [status, setStatus] = useState({
-        samePassword: true
+        samePassword: true,
+        failMessage: ''
     })
     return <RegistrationForm
         onSubmit={async ev => {
@@ -43,11 +50,12 @@ export default function RegistrationFormContainer(props){
             if(checkPassword(
                 password, repeatPassword, status, setStatus
             )){
-                await signUp(username, password, status, setStatus)
+                await signUp(username, password, status, setStatus, goTo)
             }
         }}
         usernameRef={usernameRef}
         passwordRef={passwordRef}
         repeatPasswordRef={repeatPasswordRef}
+        status={status}
     />
 }
