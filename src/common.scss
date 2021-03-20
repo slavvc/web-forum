@@ -1,0 +1,41 @@
+$border-params: 1px solid black;
+$shadow-params: 0px 0px 5px black;
+
+@mixin border {
+    border: $border-params;
+    border-radius: 5px;
+}
+
+@mixin shadow {
+    box-shadow: $shadow-params;
+}
+
+@mixin hover-shadow {
+    &:hover {
+        @include shadow;
+    }
+}
+
+@mixin border-right-to-bottom {
+    border-right: $border-params;
+    &.small {
+        border-right: none;
+        border-bottom: $border-params;
+    }
+}
+
+@mixin border-left-to-top {
+    border-left: $border-params;
+    &.small {
+        border-left: none;
+        border-top: $border-params;
+    }
+}
+
+@mixin userSection-width {
+    min-width: 7em;
+    overflow: hidden;
+    &.small {
+        min-width: unset;
+    }
+}

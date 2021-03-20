@@ -1,8 +1,8 @@
+@import "Src/common";
+
 .root {
-    border-radius: 2px;
-}
-.root:hover {
-    box-shadow: 0 0 5px;
+    @include hover-shadow;
+    border-radius: 5px;
 }
 .wrapper {
     cursor: pointer;

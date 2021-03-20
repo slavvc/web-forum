@@ -20,23 +20,22 @@
     background-color: gray;
     border-radius: 32px;
     transition: background-color 0.2s;
-}
-.slider::before {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    border-radius: inherit;
-    background-color: white;
-    transition: transform 0.2s;
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        border-radius: inherit;
+        background-color: white;
+        transition: transform 0.2s;
+    }
 }
 input:checked + .slider {
     background-color: black;
 }
 input:checked + .slider::before {
     transform: translateX(16px);
-    // background-color: white;
 }

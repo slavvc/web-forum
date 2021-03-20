@@ -1,14 +1,10 @@
 import React from 'react'
-import styles from './Breadcrumbs.module.scss'
-import classNames from 'classnames/bind'
+import cx from 'classnames'
 
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 import {useHistory} from 'react-router-dom'
 
-const cx = classNames.bind(styles)
-
-// const path = ['Home', 'Stairway', 'Train Station', 'Magadan']
 
 export default function Breadcrumbs(props){
     const {className, path, isTopic} = props

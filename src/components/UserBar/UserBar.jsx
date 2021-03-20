@@ -1,8 +1,5 @@
 import React from 'react'
-import styles from './UserBar.module.scss'
-import classNames from 'classnames/bind'
-
-const cx = classNames.bind(styles)
+import cx from 'classnames/bind'
 
 import UserContainer from 'Components/UserContainer/UserContainer'
 import BreadcrumbsContainer from 'Components/BreadcrumbsContainer/BreadcrumbsContainer'
@@ -18,7 +15,6 @@ export default function UserBar(props){
         className={
             cx(
                 className, 
-                // 'root', 
                 'no-gutters', 
                 'mx-2',
                 'align-items-center',

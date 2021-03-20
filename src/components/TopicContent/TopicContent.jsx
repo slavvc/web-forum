@@ -1,8 +1,4 @@
 import React from 'react'
-import styles from './TopicContent.module.scss'
-import classNames from 'classnames/bind'
-
-const cx = classNames.bind(styles)
 
 import LinkContainer from 'Components/LinkContainer/LinkContainer'
 import NewThreadFormContainer from 'Components/NewThreadFormContainer/NewThreadFormContainer'

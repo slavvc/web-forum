@@ -1,19 +1,17 @@
-$shadow: 0px 2px 5px black;
+@import "Src/common";
 
 .root {
-    border: 1px solid black;
-    border-radius: 5px;
+    @include border;
+    @include hover-shadow;
     cursor: pointer;
     display: flex;
 }
-.root:hover {
-    box-shadow: $shadow;
-}
 .titleSection {
     flex-grow: 1;
-}
-.titleSection h1 {
-    font-size: 1.2em;
+    overflow: hidden;
+    & h1 {
+        font-size: 1.2em;
+    }
 }
 .vegan {
     width: 1em;
@@ -23,8 +21,6 @@ $shadow: 0px 2px 5px black;
     margin-right: 0.5em;
 }
 .deleteButton {
-    border-left: 1px solid black;
-}
-.deleteButton:hover {
-    box-shadow: $shadow;
+    @include hover-shadow;
+    border-left: $border-params;
 }
