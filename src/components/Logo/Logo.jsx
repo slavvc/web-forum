@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Logo.module.scss'
 import classNames from 'classnames/bind'
 
-import bgImage from 'Public/pexels-pixabay-33109.jpg'
+import bgImage from 'Public/pexels-pixabay-33109-squooshed.jpg'
 
 const cx = classNames.bind(styles)
 
